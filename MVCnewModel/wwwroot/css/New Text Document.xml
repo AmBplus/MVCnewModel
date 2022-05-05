@@ -1,0 +1,21 @@
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+      
+      
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text="Horizontal Line"
+        android:background="#4CAF50"
+        android:textSize="25sp"
+        android:gravity="center_horizontal"/>
+      
+    <View
+        android:layout_width="320dp"
+        android:layout_height="2dp"
+        android:background="#E91E63"
+        android:layout_marginTop="270dp"
+        android:layout_marginLeft="20dp"/>
+</LinearLayout>

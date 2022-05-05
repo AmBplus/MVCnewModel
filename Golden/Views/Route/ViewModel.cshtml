@@ -1,0 +1,20 @@
+﻿@model MVCnewModel.ViewModel.CostViewModelWithBag
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>@Model.Title</title>
+</head>
+<body>
+<div>
+      @Model.CostData.Id
+      @Model.CostData.Category 
+      @Model.CostData.Amount
+</div>
+</body>
+</html>

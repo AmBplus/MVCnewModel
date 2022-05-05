@@ -1,0 +1,26 @@
+﻿@using MVCnewModel.Models
+@model ICostRepository
+@addTagHelper *,Microsoft.AspNetCore.Mvc.TagHelpers
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>title</title>
+</head>
+<body>
+<div>
+    @{
+        var  costModel = @Model as StaticCostRepository;
+    }
+    @foreach (var cost in costModel.costs)
+    {
+        // <partial name="costPartialView" model="CostData"/>
+        // 
+        // await Html.PartialAsync("costPartialView", CostData);
+        await Html.RenderPartialAsync(partialViewName: "costPartialView", model: cost);
+    }
+</div>
+</body>
+</html>

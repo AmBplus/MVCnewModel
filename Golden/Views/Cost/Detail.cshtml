@@ -1,0 +1,44 @@
+﻿@model CostViewModelWithBag
+@{
+    //Layout = null;
+    ViewBag.Title = "Cost Detail";
+}
+<div class="row">
+    <div class="alert alert-primary col-lg-6 offset-lg-3 mt-5" role="alert">
+        <h2>Create Cost Record</h2>
+    </div>
+    <form  class="col-lg-6 offset-lg-3 border border-1">
+        <div>
+            @Html.Label("amount","Amount", new
+            {
+                @class="form-label"
+            })
+            @Html.TextBox("amount","",new
+            {
+                @class ="form-control"
+            })
+        </div>
+        <div>
+            @Html.Label("date","Date", new
+            {
+                @class="form-label"
+            })
+            @Html.TextBox("date","" , new
+            {
+                @class="form-control"
+            })
+        </div>
+        <div>
+            @Html.Label("category","Category", new
+            {
+                @class="form-label"
+            })
+            @Html.DropDownList(expression:"category",selectList: ViewBag.category ,optionLabel:"Select Category",htmlAttributes: new{@class="form-control"})
+          
+        </div>
+        <div class="mt-2">
+            <button type="submit" class="btn btn-primary btn-block mb-1">Create</button>
+        </div>
+    </form>
+
+</div>

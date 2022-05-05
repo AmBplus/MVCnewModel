@@ -1,0 +1,36 @@
+﻿@using System.Security.Cryptography.X509Certificates
+@model ModelStrongly
+@{
+    //Layout = null;
+    ViewBag.Title = "Cost Model Strongly";
+}
+<div class="row">
+    <div class="alert alert-primary col-lg-6 offset-lg-3 mt-5" role="alert">
+        <h2>Create Cost Record</h2>
+    </div>
+    <form  class="col-lg-6 offset-lg-3 border border-1">
+        <div>
+          @Html.LabelFor(m=>m.Amount,new
+          {
+              @class="form-label"
+          })
+          @Html.TextBoxFor(x=>x.Amount,new {@class="form-control"})
+        </div>
+        <div>
+         @Html.LabelFor(x=>x.Date,new {@class="form-label"})
+         @Html.TextBoxFor(x=>x.Date,new {@class="form-control"})
+        </div>
+        <div>
+            @Html.LabelFor(x=>x.Category,new {@class="form-label"})
+            @Html.DropDownListFor(x=>x.Category,@Model.Gategories,"select a Category",new {@class="form-control"})
+        </div>
+        <div>
+            @Html.LabelFor(x=>x.Comment,new {@class="form-label"})
+            @Html.TextAreaFor(x=>x.Comment,new{@class="form-control"})
+        </div>
+        <div class="mt-2">
+            <button type="submit" class="btn btn-primary btn-block mb-1">Create</button>
+        </div>
+    </form>
+
+</div>

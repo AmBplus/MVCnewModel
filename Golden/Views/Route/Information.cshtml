@@ -1,0 +1,20 @@
+﻿
+
+
+@{
+    Layout = "_MainLayout";
+}
+@ViewBag.PageTitle
+
+
+
+@{
+    var cost = ViewBag.cost as MVCnewModel.Models.Cost;
+}
+<h2>@cost.Category</h2>
+@{
+    await Html.PartialAsync(partialViewName: "costPartialView" , model:cost);
+}
+@section scriptAlert{
+    <script src="~/js/Alert.js"></script>         
+    }
